@@ -36,12 +36,44 @@
       <ion-col text-center>
         <button ion-button clear small color="danger" icon-left>
           <ion-icon name='musical-notes'></ion-icon>
-            Alert On
+          Alert On
         </button>
       </ion-col>
     </ion-row>
   </ion-card>
 
-  
+  <!--<ion-list *ngIf="course.exams !== null">-->
+
+  <!--<ion-item *ngFor="let exam of course.exams">-->
+  <!--&lt;!&ndash;<ion-avatar item-left>&ndash;&gt;-->
+  <!--&lt;!&ndash;<img src="assets/img/avatar-ts-buzz.png">&ndash;&gt;-->
+  <!--&lt;!&ndash;</ion-avatar>&ndash;&gt;-->
+  <!--<h2>{{exam.name}}</h2>-->
+  <!--<p>{{exam.date}}</p>-->
+  <!--<ion-note item-right>{{exam.time}}</ion-note>-->
+
+  <!--</ion-item>-->
+  <!---->
+  <!--</ion-list>-->
+
+  <ion-list *ngIf="course.exams !== null">
+    <ion-list-header>Exams</ion-list-header>
+    <ion-item-sliding *ngFor="let exam of course.exams">
+      <ion-item>
+        <ion-icon name="planet" item-left></ion-icon>
+        <h2>{{exam.name}}</h2>
+        <p>{{exam.date}}</p>
+        <p>{{exam.note}}</p>
+        <ion-note item-right>{{exam.time}}</ion-note>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="md-checkmark"></ion-icon>
+            Completed
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
 
 </ion-content>

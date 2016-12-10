@@ -41,7 +41,7 @@ export class CoursesPage {
         this.courses = this.semesters[0].courses;
       }
     }));
-    
+
   }
 
   semesterSelected() : void{
@@ -57,7 +57,7 @@ export class CoursesPage {
   showLoading(){
     this.loadingCtrl.create({
       content : "Please wait...",
-      duration : 2000
+      duration : 500
     }).present();
   }
 
