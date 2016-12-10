@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import {LoadingController} from 'ionic-angular';
 import { NavController } from 'ionic-angular';
-import {CoursesService} from '../../providers/courses/courses-service';
-import {Semester} from '../../model/semester';
-import {Course} from '../../model/course';
+import {CoursesService} from '../../../providers/courses/courses-service';
+import {Semester} from '../../../model/semester';
+import {Course} from '../../../model/course';
+import {CourseDetailsPage} from '../course-details/course-details';
 
 @Component({
   selector: 'page-courses',
@@ -27,10 +28,14 @@ export class CoursesPage {
     console.log(this.courses);
   }
 
-  semesterSelected(){
+  semesterSelected() : void{
     this.showLoading();
     this.courses = this.semesters.find((sem)=> this.semester === sem.name).courses;
     
+  }
+
+  onListItemClick(course : Course) : void{
+    this.navCtrl.push(CourseDetailsPage,course);
   }
 
   showLoading(){

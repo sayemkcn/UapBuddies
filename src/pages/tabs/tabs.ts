@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { HomePage } from '../home/home';
 import { AboutPage } from '../about/about';
-import { CoursesPage } from '../courses/courses';
+import { CoursesPage } from '../courses/courselist/courses';
 
 @Component({
   templateUrl: 'tabs.html'
