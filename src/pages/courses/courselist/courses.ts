@@ -25,7 +25,7 @@ export class CoursesPage {
     this.showLoading();
     this.semester = this.semesters[0].name;
     this.courses = this.semesters[0].courses;
-    console.log(this.courses);
+    // console.log(this.courses);
   }
 
   semesterSelected() : void{

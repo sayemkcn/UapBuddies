@@ -7,6 +7,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { CoursesPage } from '../pages/courses/courselist/courses';
 import { CourseDetailsPage } from '../pages/courses/course-details/course-details';
 import {AddExamPage} from '../pages/exams/add-exam/add-exam';
+import {Storage} from '@ionic/storage';
 
 @NgModule({
   declarations: [
