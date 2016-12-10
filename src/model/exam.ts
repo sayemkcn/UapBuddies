@@ -3,5 +3,5 @@ export interface Exam{
     date: Date;
     time: Date;
     note: string;
-    alarm: boolean;
+    alert: boolean;
 }

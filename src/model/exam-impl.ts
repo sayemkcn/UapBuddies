@@ -4,7 +4,7 @@ export class IExam implements Exam{
     date : Date;
     time : Date;
     note : string;
-    alarm : true;
+    alert : true;
 
     constructor(){
         this.date = new Date();
