@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Semester</ion-label>
+    <ion-select [(ngModel)]="semester" (ionChange)="semesterSelected()">
+      <ion-option *ngFor="let semester of semesters">{{semester.name}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>{{semester}}</ion-card-header>
+    <ion-list>
+      <button ion-item *ngFor="let course of courses" (click)="onListItemClick(course)">
+        <ion-icon name="planet" item-left></ion-icon>
+        <h2>{{course.code}}</h2>
+        <h3>{{course.title}}</h3>
+        <p>Crdit: {{course.credits}}</p>
+        <ion-badge item-right *ngIf="courses.exams != null" [(ngModel)]="course.exams.length">{{course.exams.length}}</ion-badge>
+      </button>
+    </ion-list>
+  </ion-card>
+</ion-content>
