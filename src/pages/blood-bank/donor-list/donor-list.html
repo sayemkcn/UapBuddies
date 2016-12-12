@@ -27,7 +27,7 @@
   </ion-item>
 
   <ion-list>
-    <ion-item *ngFor="let donor of donors">
+    <ion-item *ngFor="let donor of donors" (click)="onListItemClick(donor)">
         <h3>{{donor.name}}</h3>
         <p item-top item-right>{{donor.id}}</p>
         <p>{{donor.email}}</p>

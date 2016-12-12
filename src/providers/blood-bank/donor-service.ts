@@ -42,7 +42,7 @@ export class DonorService{
                 isAvailable : true,
                 lastDonated : "25/5/2016"
             }
-        ];;
+        ];
 
     
 
