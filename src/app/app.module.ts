@@ -8,6 +8,7 @@ import {CoursesPage} from '../pages/courses/courselist/courses';
 import {CourseDetailsPage} from '../pages/courses/course-details/course-details';
 import {AddExamPage} from '../pages/exams/add-exam/add-exam';
 import {ExamListPage} from "../pages/exams/exam-list/exam-list";
+import {DonorListPage} from '../pages/blood-bank/donor-list/donor-list';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ExamListPage} from "../pages/exams/exam-list/exam-list";
     HomePage,
     TabsPage,
     AddExamPage,
-    ExamListPage
+    ExamListPage,
+    DonorListPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -32,7 +34,8 @@ import {ExamListPage} from "../pages/exams/exam-list/exam-list";
     HomePage,
     TabsPage,
     AddExamPage,
-    ExamListPage
+    ExamListPage,
+    DonorListPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
