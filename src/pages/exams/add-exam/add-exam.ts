@@ -6,6 +6,7 @@ import {Exam} from '../../../model/exam';
 import {IExam} from '../../../model/exam-impl';
 import {Course} from '../../../model/course';
 import {Storage} from '@ionic/storage';
+import { LocalNotifications } from 'ionic-native';
 
 @Component({
   selector: 'page-add-exam',
@@ -42,8 +43,16 @@ export class AddExamPage {
       }
       this.course.exams.push(this.exam); // add exam to the course
       this.storage.set(this.course.code,this.course); // save on storage
+      // set notification
+      LocalNotifications.schedule({
+        text : this.course.title+" is about to happen!",
+        at: new Date(new Date().getTime()+3600),
+        led: 'FF0000',
+        sound: null
+      });
       this.navCtrl.pop();
     })
+    
   }
 
 }
