@@ -8,4 +8,31 @@
 
 <ion-content padding>
 
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="../../assets/images/dev.jpg"/>
+      </ion-avatar>
+      <h2>Sayem Hosain</h2>
+      <p>Developer</p>
+      </ion-item>
+      <img src="../../assets/images/cover.jpg" />
+    <ion-card-content>
+        <p>Java programmer and Android Developer. Currently working as a Spring developer at AimsLabs at UIU. I like spending time watching TV Series, movies and hanging out with friends of course. There're several ways you can wish me good luck, installing my applications and puting your reviews on Play Store is one of them.<br/>Ya! Hurry up! click on <span color="primary">More Apps</span> button and install some of my deadly apps. Let's see how they look like to you..</p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small color="danger" (click)="openUrl('facebook')">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <div>Facebook</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small color="danger" (click)="openUrl('playstore')">
+            <ion-icon name="logo-google"></ion-icon>
+            <div>More Apps</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
 </ion-content>

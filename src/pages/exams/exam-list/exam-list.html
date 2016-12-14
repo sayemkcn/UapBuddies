@@ -1,0 +1,63 @@
+<!--
+  Generated template for the ExamList page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>exam-list</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!--Upcoming Exams-->
+  <ion-list *ngIf="upcomingExams !== null">
+    <ion-list-header>Upcoming Exams</ion-list-header>
+    <ion-item-sliding *ngFor="let exam of upcomingExams">
+      <ion-item>
+        <ion-icon name="clipboard" item-left></ion-icon>
+        <h2>{{exam.name}}</h2>
+        <p>{{exam.note}}</p>
+        <ion-note item-right>{{exam.time}}</ion-note>
+      </ion-item>
+      <ion-item-options side="right">
+        <button *ngIf="exam.alert" ion-button color="primary" (click)="toggleNotification(exam)">
+          <ion-icon name="alarm"></ion-icon>
+          Notification On
+        </button>
+        <button *ngIf="!exam.alert" ion-button color="light" (click)="toggleNotification(exam)">
+          <ion-icon name="ios-alarm"></ion-icon>
+          Notification Off
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+<!--Past Exams-->
+  <ion-list *ngIf="pastExams !== null">
+    <ion-list-header>Past Exams</ion-list-header>
+    <ion-item-sliding *ngFor="let exam of pastExams">
+      <ion-item>
+        <ion-icon name="clipboard" item-left></ion-icon>
+        <h2>{{exam.name}}</h2>
+        <p>{{exam.note}}</p>
+        <ion-note item-right>{{exam.time}}</ion-note>
+      </ion-item>
+      <ion-item-options side="right">
+        <button *ngIf="exam.alert" ion-button color="primary" (click)="toggleNotification(exam)">
+          <ion-icon name="alarm"></ion-icon>
+          Notification On
+        </button>
+        <button *ngIf="!exam.alert" ion-button color="light" (click)="toggleNotification(exam)">
+          <ion-icon name="ios-alarm"></ion-icon>
+          Notification Off
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

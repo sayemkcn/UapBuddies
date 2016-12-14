@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Courses
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -22,7 +22,7 @@
         <h2>{{course.code}}</h2>
         <h3>{{course.title}}</h3>
         <p>Crdit: {{course.credits}}</p>
-        <ion-badge item-right *ngIf="courses.exams != null" [(ngModel)]="course.exams.length">{{course.exams.length}}</ion-badge>
+        <!--<ion-badge item-right *ngIf="courses.exams != null" [(ngModel)]="course.exams.length">{{course.exams.length}}</ion-badge>-->
       </button>
     </ion-list>
   </ion-card>

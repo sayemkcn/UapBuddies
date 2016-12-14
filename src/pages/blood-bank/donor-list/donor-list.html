@@ -1,0 +1,38 @@
+<!--
+  Generated template for the DonorList page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-searchbar
+      [(ngModel)]="searchPhrase"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onSearchInput($event)"
+      (ionCancel)="onSearchCancel($event)">
+    </ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Blood Group</ion-label>
+    <ion-select [(ngModel)]="group" (ionChange)="groupSelected()">
+      <ion-option *ngFor="let group of groups">{{group}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let donor of donors" (click)="onListItemClick(donor)">
+        <h3>{{donor.name}}</h3>
+        <p item-top item-right>{{donor.id}}</p>
+        <p>{{donor.email}}</p>
+        <p>{{donor.address}}</p>
+        <p item-left>{{donor.bloodGroup}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

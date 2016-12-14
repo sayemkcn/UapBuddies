@@ -21,13 +21,13 @@
         <ion-input [(ngModel)]="exam.name" type="text"></ion-input>
       </ion-item>
 
-      <ion-item>
+      <!--<ion-item>
         <ion-label>Exam Date</ion-label>
         <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="exam.date"></ion-datetime>
-      </ion-item>
+      </ion-item>-->
       <ion-item>
         <ion-label>Exam Time</ion-label>
-        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="exam.time"></ion-datetime>
+        <ion-datetime displayFormat="YYYY-MM-DDTHH:MM:SS" pickerFormat="MMM DD YYYY h mm A" [(ngModel)]="exam.time"></ion-datetime>
       </ion-item>
 
       <ion-item>
